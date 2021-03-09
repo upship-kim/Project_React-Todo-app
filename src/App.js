@@ -31,10 +31,18 @@ const App = () => {
             },
             [todos] //todos 배열이 업데이트될때 리렌더링 
   );
+
+  const onRemove = useCallback(
+    id => {
+      //todo 배열들의 todo.id 값이 위 id값과 같지 않은것들만 새로 배열 추출
+      setTodos(todos.filter(todo => todo.id !==id));
+    }, [todos] //todos 배열이 업데이트 되면 리렌더링
+  );
+
   return (
       <TodoTemplate>
         <TodoInsert onInsert={onInsert}/>
-        <TodoList todos={todos} />
+        <TodoList todos={todos} onRemove={onRemove} />
       </TodoTemplate>
       
     

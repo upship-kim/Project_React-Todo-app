@@ -15,7 +15,7 @@ const TodoInsert = ( { onInsert }) => {
             setValue('');   //value값 초기화 
             
             //주의점: submit은 브라우저 새로고침을 발생시키므로 이를 중지시켜야함
-            //리렌더링 되면 새 값이 추가되었다가 바로 삭제됨 
+            //새로고침 되면 새 값이 추가되었다가 바로 삭제됨 
             e.preventDefault();
         }, [onInsert, value],    //onInsert 또는 value가 업데이트되면 리렌더링
     );

@@ -7,8 +7,8 @@ import{
 import './TodoListItem.scss';
 import cname from 'classnames';
 
-const TodoListItem = ({ todo }) => {
-    const { text, checked } = todo;     //todo에 포함되어있는 속성들 
+const TodoListItem = ({ todo, onRemove }) => {
+    const { id, text, checked } = todo;     //todo에 포함되어있는 속성들 
     return (
         <div className="TodoListItem">
             {/* classnames library 사용  */}
@@ -16,7 +16,7 @@ const TodoListItem = ({ todo }) => {
                 {checked ? <MdCheckBox/> :<MdCheckBoxOutlineBlank/>}
                 <div className="text">{text}</div>
             </div>
-            <div className="remove">
+            <div className="remove" onClick={() => onRemove(id)}>
                 <MdRemoveCircleOutline/>
             </div>
         </div>
