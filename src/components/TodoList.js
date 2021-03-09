@@ -6,7 +6,7 @@ import './TodoList.scss';
 const TodoList = ({ todos }) => {
     return (
         <div className="TodoList">
-            {todos.map(todo => (
+            {todos.map(todo => (    //여기서 todo는 지정한것? 
                 <TodoListItem todo={todo} key={todo.id} />
             ))}
         </div>
