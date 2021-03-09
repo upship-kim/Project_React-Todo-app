@@ -39,10 +39,19 @@ const App = () => {
     }, [todos] //todos 배열이 업데이트 되면 리렌더링
   );
 
+  const onToggle = useCallback(
+    id => {
+      setTodos(
+        todos.map(todo => 
+          todo.id === id ?{...todo, checked: !todo.checked} : todo
+        )
+      )
+    }, [todos]
+  )
   return (
       <TodoTemplate>
         <TodoInsert onInsert={onInsert}/>
-        <TodoList todos={todos} onRemove={onRemove} />
+        <TodoList todos={todos} onRemove={onRemove} onToggle={onToggle} />
       </TodoTemplate>
       
     
