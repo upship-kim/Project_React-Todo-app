@@ -1,0 +1,38 @@
+.TodoInsert {
+  display: flex; //부모 컴포넌트와의 공백이 사라짐
+  background: #495057;
+  input {
+    //기본 스타일 초기화
+    background: none;
+    outline: none;
+    border: none;
+    padding: 0.5rem;
+    font-size: 1.125rem;
+    line-height: 1.5; //padding 같은거 input 위아래 공백
+    color: white;
+    &::placeholder {
+      color: #dee2e6;
+    }
+    //버튼을 제외한 영역을 모두 차지하기
+    // width: 100%; 또는
+    flex: 1;
+  }
+
+  button {
+    //기본스타일 초기화
+    background: none;
+    outline: none;
+    border: none;
+    background: #868e96;
+    color: white;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.1s background ease-in;
+    &:hover {
+      background: #adb5bd;
+    }
+  }
+}

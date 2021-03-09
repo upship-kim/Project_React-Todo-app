@@ -1,6 +1,7 @@
 import React from 'react'
 import { MdAdd } from 'react-icons/md'; //react icon library
 import './TodoInsert.scss';
+
 const TodoInsert = () => {
     return (
         <form className="TodoInsert">
