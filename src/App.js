@@ -96,11 +96,11 @@ function todoReducer(todos, action) {
 const App = () => {
   const [todos, dispatch] = useReducer(todoReducer, undefined, createBulkTodos);
 
-  const nextId = useRef(2);
+  const nextId = useRef(3);
 
   const onInsert = useCallback((text) => {
     const todo = {
-      id: nextId.current,
+      id: (nextId.current += 1),
       text,
       checked: false,
     };
