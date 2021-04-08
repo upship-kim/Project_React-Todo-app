@@ -36,9 +36,8 @@
       color: #ff8787;
     }
   }
-
-  //엘리먼트 사이사이에 테두리 넣어준대
 }
+//엘리먼트 사이사이에 테두리 넣어준대
 .TodoListItem-virtualized {
   & + & {
     border-top: 1px solid #dee2e6;

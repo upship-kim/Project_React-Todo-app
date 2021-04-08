@@ -15,7 +15,7 @@ const TodoList = ({ todos, onRemove, onToggle }) => { //todos 와 onRemove를 �
                     onRemove={onRemove} 
                     onToggle={onToggle}
                     style={style}
-                    />
+                />
             );
         },
         [onRemove, onToggle, todos],
